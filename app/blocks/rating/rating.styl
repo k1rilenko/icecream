@@ -1,0 +1,119 @@
+.rating
+	display block
+	margin-bottom 4rem
+	&__head
+		text-align center
+	&__icon
+		margin-bottom 4.1rem
+	&__title
+		margin-bottom 1.6rem
+		padding 0 20%
+	&__subtitle
+		font-family $r
+		font-size 1.8rem
+		line-height 1.39
+		margin-bottom 5.2rem
+	&__item
+		text-decoration none
+		&_capitan
+			.rating__image-wrap
+				background $capitan
+				&:before
+				&:after
+					background $capitan
+		&_hrust
+			.rating__image-wrap
+				background $hrust
+				&:before
+				&:after
+					background $hrust
+		&_eskimon
+			.rating__image-wrap
+				background $eskimon
+				&:before
+				&:after
+					background $eskimon
+		&_kaktus
+			.rating__image-wrap
+				background $kaktus
+				&:before
+				&:after
+					background $kaktus
+		&_lakomka
+			.rating__image-wrap
+				background $lakomka
+				&:before
+				&:after
+					background $lakomka
+		&_plombirovna
+			.rating__image-wrap
+				background $plombirovna
+				&:before
+				&:after
+					background $plombirovna
+		&_raduga
+			.rating__image-wrap
+				background $raduga
+				&:before
+				&:after
+					background $raduga
+		&_rifleniu
+			.rating__image-wrap
+				background $rifleniu
+				&:before
+				&:after
+					background $rifleniu
+		&_rojoker
+			.rating__image-wrap
+				background $rojoker
+				&:before
+				&:after
+					background $rojoker
+	&__image-wrap
+		position relative
+		width 28.6rem
+		height 28.6rem
+		border-radius 50%
+		margin-bottom 1.7rem
+		&:before
+		&:after
+			position absolute
+			content ''
+			border-radius 50%
+		&:before
+			left 0
+			top 10px
+			width 37px
+			height 37px
+		&:after
+			left 45px
+			top 0
+			width 13px
+			height 13px
+
+	&__value
+		max-height 286px
+	&__name
+		position absolute
+		max-width 250px
+		bottom 15px
+		left 50%
+		transform translateX(-50%)
+	&__num-value
+		display flex
+		flex-direction column
+	&__percent
+		margin-bottom 1.3rem
+		font-family $bor
+		font-size 4.5rem
+		color $b
+	&__point
+		font-size 2rem
+		line-height 3rem
+		color $blue
+		margin-bottom 2.3rem
+	&__slider
+		.swiper-pagination
+			position relative
+			bottom 0
+			padding-top 3.9rem

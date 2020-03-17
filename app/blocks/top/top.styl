@@ -1,0 +1,79 @@
+.top
+	padding-top 10rem
+	display block
+	&__wrapper
+		background-color $blue
+		background-image url(/assets/images/top-wave.png)
+		background-repeat no-repeat
+	&__head
+		text-align center
+	&__icon
+		margin-bottom 4.6rem
+	&__subtitle
+		font-size 2rem
+		line-height 1.5
+		color $b
+		margin-bottom 3rem
+	&__block
+		&_text
+			padding 0 1.5rem
+	&__table
+		width 100%
+		border 2px solid $grey
+		box-shadow 0 1px 1px rgba(32, 45, 106, .08), 0 2px 2px rgba(32, 45, 106, .08), 0 4px 4px rgba(32, 45, 106, .08), 0 8px 8px rgba(32, 45, 106, .08), 0 16px 16px rgba(32, 45, 106, .08)
+		border-radius 20px
+		background-color $w
+		margin-bottom 4rem
+		&-row
+			display flex
+			border-bottom 2px solid $grey
+		&-head
+			.top__table-date
+				font-size 1.4rem
+				font-weight 700
+				line-height 2rem
+				color $dgrey
+				text-transform lowercase
+				padding 1.5rem 1rem
+				&:first-child
+					font-size 0
+		&-date
+			font-size 2rem
+			color $b
+			padding 2.5rem 1rem
+			&:first-child
+				width 50px
+				text-align center
+				font-weight 700
+				border-right 2px solid $grey
+			&:nth-child(2)
+				width 110px
+				border-right 2px solid $grey
+			&:last-child
+				width 130px
+				text-align right
+		&-body &
+			&-row
+				&:last-child
+					border none
+	&__link-block
+		display flex
+		justify-content center
+	&__link
+		position relative
+		text-decoration none
+		font-family $bor
+		font-size 2.2rem
+		line-height 2.5rem
+		color $w
+		padding-bottom .9rem
+		&:after
+			position absolute
+			content ''
+			width 100%
+			height 3px
+			background-color $w
+			bottom 0
+			left 0
+
+

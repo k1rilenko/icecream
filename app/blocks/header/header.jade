@@ -1,0 +1,25 @@
+mixin header(isLoggined, logo, links)
+	+b('header').header&attributes(attributes)
+		+e.container.container._header
+			+e.wrapper
+				if logo
+					+e.logo
+						+e('a').logo-link(href="#")
+							+e('img').logo-image(src="./assets/images/logo.png")
+				else
+					+e('button').back.button
+						+b('svg').icon._back
+							use(xlink:href='#back')
+				if !links
+					+e('ul').link
+						+e('li').link-item
+							+e('a').link-href(href="#") Правила
+						+e('li').link-item
+							+e('a').link-href(href="#") Призы
+				if !isLoggined
+					+e.login
+						+e('button').login-button.button Вход
+				else
+					+e.user
+						+e.user-wrapper
+							+e('img').user-icon(src="./assets/images/3.jpg")

@@ -1,0 +1,10 @@
+mixin promo()
+	+b.promo&attributes(attributes)
+		.container
+			+e('h1').title.title._white проверь свою удачу!
+			+e.input-block
+				+e.input-wrapper
+					+e('input').input(type="text" placeholder="Введи код")
+					+e('button').button.button._circle
+						+b('svg').icon._back
+							use(xlink:href='#back')

@@ -1,0 +1,68 @@
+.rules
+	display block
+	background-image $gradient
+	padding-bottom 4rem
+	&__title
+		padding-top 9rem
+		padding-bottom 4.7rem
+	&__slider
+		.swiper-slide
+			height 440px
+			&:first-child
+				.slider__image-wrap
+					padding-top 2.6rem
+				.slider__value
+					position relative
+					transform translateX(-15px)
+				.slider__rule
+					padding 0 3.5rem
+
+		.swiper-pagination
+			position relative
+			padding-top 3.7rem
+		.swiper-pagination-bullet
+			margin 0 5px
+			width 10px
+			height 10px
+			background-color $w
+			opacity 1
+			&.swiper-pagination-bullet-active
+				box-shadow 0 0 0 2.5px $w
+			&:first-child
+				&.swiper-pagination-bullet-active
+					background linear-gradient(204.03deg, #D3FF76 0, #62C812 100%)
+			&:nth-child(2)
+				&.swiper-pagination-bullet-active
+					background linear-gradient(204.03deg, #FFC1F5 0, #E039EF 100%)
+			&:nth-child(3)
+				&.swiper-pagination-bullet-active
+					background linear-gradient(204.03deg, #FFD84F 0, #FF8A00 100%)
+		.slider__container
+			background-color $w
+			border-radius 16px
+			height 100%
+		.slider__image-wrap
+			position relative
+			margin-bottom 3.4rem
+		.slider__num
+			display block
+			text-align center
+			font-family $bor
+			font-size 2.2rem
+			line-height 1.82
+			color $blue
+			margin-bottom 1rem
+		.slider__rule
+			padding 0 2rem
+			text-align center
+		.slider__text
+			padding .82rem 1.5rem 0
+			font-family $r
+			font-size 1.8rem
+			line-height 1.39
+			text-align center
+		.slider__image-wrap
+			padding-top 5.5rem
+			display flex
+			justify-content center
+

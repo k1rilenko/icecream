@@ -1,0 +1,10 @@
+mixin part(img1, img2)
+	+b.part&attributes(attributes)
+		+e.container
+			+e.wrapper
+				+e('button').button.button_success Участвовать
+			+e.back
+				+e('img').image(src="./assets/images/#{img1}")
+			if img2
+				+e.back._side
+					+e('img').image(src="./assets/images/#{img2}")

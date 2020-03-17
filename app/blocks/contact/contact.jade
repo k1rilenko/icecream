@@ -1,0 +1,37 @@
+mixin contact()
+	+b.contact&attributes(attributes)
+		+e.wrapper
+			+e.links
+				+e('ul').links-list
+					+e('li').links-item
+						+e('a').links-href(href="#")
+							+e('span').links-icon
+								+b('svg').icon._list
+									use(xlink:href='#list')
+							+e('span').links-text Условия акции
+					+e('li').links-item
+						+e('a').links-href(href="#")
+							+e('span').links-icon
+								+b('svg').icon._list
+									use(xlink:href='#list')
+							+e('span').links-text Политика конфиденциальности
+			+e.data
+				+e('ul').data-list
+					+e('li').data-item
+						+e('a').data-href(href="mailto:bitva@plombirov.ru")
+							+e('i').data-icon
+								+b('svg').icon._mail
+									use(xlink:href='#mail')
+							+e('span').data-value bitva@plombirov.ru
+					+e('li').data-item
+						+e('a').data-href(href="tel: +7911232323")
+							+e('i').data-icon
+								+b('svg').icon._phone
+									use(xlink:href='#phone')
+							+e('span').data-value +7 911232323
+					+e('li').data-item
+						+e('a').data-href(href="#")
+							+e('i').data-icon
+								+b('svg').icon._globe
+									use(xlink:href='#globe')
+							+e('span').data-value icecream-chl.ru
