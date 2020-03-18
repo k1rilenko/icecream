@@ -1,0 +1,21 @@
+{
+	"title": "Леди Хруст",
+	"gradient": "hrust",
+	"prev": "#",
+	"next": "#",
+	"name": "hrust-title.png",
+	"image": "hrust.png",
+	"rating": "21",
+	"place": "1",
+	"wins": "10",
+	"winimage": "hrust-wins.svg",
+	"lose": "2",
+	"loseimage": "hrust-lose.svg",
+	"height": "10",
+	"weight": "80",
+	"cal": "217",
+	"weaponImage": "hrust-weapon.png",
+	"weapon": "Заостренные ложки",
+	"enemyImage": "lakomka-weapon.png",
+	"enemy": "Лакомка московская"
+}

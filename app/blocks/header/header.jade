@@ -21,5 +21,6 @@ mixin header(isLoggined, logo, links)
 						+e('button').login-button.button Вход
 				else
 					+e.user
+						+e('span').user-name Имя
 						+e.user-wrapper
 							+e('img').user-icon(src="./assets/images/3.jpg")
