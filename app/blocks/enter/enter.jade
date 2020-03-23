@@ -1,0 +1,52 @@
+mixin enter()
+	+b.popup&attributes(attributes)
+		+e.wrapper
+			+e('button').button.button_close
+				+b('svg').icon_close
+					use(xlink:href="#close")
+			+b.tabs
+				+e('ul').caption
+					+e('li').item.active Вход
+					+e('li').item Регистрация
+				+e('ul').apps
+					+e('li').apps-item
+						+e('a').apps-link_vk(href="#")
+							+e('img').apps-img(src="./assets/images/icons/vk.svg")
+					+e('li').apps-item
+						+e('a').apps-link_fb(href="#")
+							+e('img').apps-img(src="./assets/images/icons/fb.svg")
+					+e('li').apps-item
+						+e('a').apps-link_google(href="#")
+							+e('img').apps-img(src="./assets/images/icons/google.png")
+					+e('li').apps-item
+						+e('a').apps-link_ya(href="#")
+							+e('img').apps-img(src="./assets/images/icons/ya.svg")
+				+e.content.active
+					+b('form').form(method="post" action="")
+						+e.wrapper
+							+e.input-wrapper
+								+e('input').input(type="text" placeholder="Email / Телефон")
+							+e.input-wrapper
+								+e('input').input(type="password" placeholder="Пароль")
+							+e.button-wrapper
+								+e('button').button.button_success Войти
+							+e.link-wrapper
+								+e('a').link(href="#") Забыли пароль?
+				+e.content
+					+b('form').form(method="post" action="")
+						+e.wrapper
+							+e.input-wrapper
+								+e('input').input(type="text" placeholder="Email / Телефон")
+							+e.input-wrapper
+								+e('input').input(type="password" placeholder="Пароль")
+							+e.input-wrapper
+								+e('input').input(type="password" placeholder="Повторите пароль")
+							+e.checkbox-block
+								+e.input-wrapper._checkbox
+									+e('input').input._checkbox(type="checkbox" id="id-1")
+									+e.label(for='id-1') Соглашаюсь с условиями акции
+								+e.input-wrapper._checkbox
+									+e('input').input._checkbox(type="checkbox" id="id-2")
+									+e.label(for='id-2') Принимаю пользовательское соглашение
+							+e.button-wrapper
+								+e('button').button.button_success Регистрация

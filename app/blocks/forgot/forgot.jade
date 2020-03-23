@@ -1,0 +1,13 @@
+mixin forgot()
+	+b.popup._forgot
+		+e.wrapper
+			+e('button').button.button_close
+				+b('svg').icon_close
+					use(xlink:href="#close")
+			+b('form').form._forgot(method="post" action="")
+				+e.wrapper
+					+e('p').title Восстановление пароля
+					+e.input-wrapper
+						+e('input').input(type="text" placeholder="Email / Телефон")
+					+e.button-wrapper
+						+e('button').button.button_success Восстановить

@@ -1,0 +1,10 @@
+mixin questions()
+	+b('section').questions&attributes(attributes)
+		.container
+			+e('ul').list
+				for item in getData('faq')
+					+e('li')(class="item _#{item.type}")
+						+e('p').title= item.title
+							+b('svg').icon._link
+								use(xlink:href='#link-arrow')
+						+e('div').text= item.text
