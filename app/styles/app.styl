@@ -35,6 +35,21 @@ import('helpers/svg-size')
 			left 50%
 			top 50%
 			transform translate(-68%, -50%)
+	&_nav
+		position absolute
+		display inline-block
+		border 2px solid $w
+		border-radius 50%
+		width 60px
+		height 60px
+		.icon_link
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%, -50%)
+			stroke $w
+	&_close
+		padding 10px
 	&_success
 		font-size 2.2rem
 		line-height 2.5rem

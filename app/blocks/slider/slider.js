@@ -1,11 +1,12 @@
 app.slider = {
-	init(selector, options) {
+	init() {
 		app.common.initScript('swiper.min', 'mySwiper', () => {
-			this.runSlider('.swiper-rules', options || this.options);
+			const sliderRules = new Swiper('.swiper-rules', this.options);
 			this.runSlider('.rating__slider .swiper-container', this.optionsRating);
 			this.runSlider('.swiper-gifts', this.options);
 		});
 		app.common.initStyle('swiper.min');
+		this.destroyRulesSlider();
 	},
 	runSlider(selector, options) {
 		const slider = new Swiper(selector, options);
@@ -27,5 +28,10 @@ app.slider = {
 		slidesPerView: 1.15,
 		centeredSlides: true,
 		spaceBetween: 10
+	},
+	destroyRulesSlider() {
+		if (window.innerWidth > 1280) {
+			sliderRules.destroy();
+		}
 	}
 };
