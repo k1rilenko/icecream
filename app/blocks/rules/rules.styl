@@ -2,12 +2,17 @@
 	display block
 	background-image $gradient
 	padding-bottom 4rem
+	+above($xl)
+		padding-bottom 6rem
 	&__title
 		padding-top 9rem
 		padding-bottom 4.7rem
 	&__slider
 		.swiper-slide
 			height 440px
+			+above($xl)
+				width 38rem
+				height 52rem
 			&:first-child
 				.slider__image-wrap
 					padding-top 2.6rem
@@ -16,10 +21,17 @@
 					transform translateX(-15px)
 				.slider__rule
 					padding 0 3.5rem
-
+		.swiper-wrapper
+			+above($xl)
+				max-width 1180px
+				margin 0 auto
+				justify-content space-between
+				box-sizing border-box
 		.swiper-pagination
 			position relative
 			padding-top 3.7rem
+			+above($xl)
+				display none
 		.swiper-pagination-bullet
 			margin 0 5px
 			width 10px

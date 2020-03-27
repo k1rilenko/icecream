@@ -4,39 +4,43 @@
 	&__container
 		overflow hidden
 		position relative
-		&:after
-			position absolute
-			content ''
-			border-radius 50%
-			background $rifleniu
-			width 89px
-			height 89px
-			top 20px
-			right -35px
-			filter blur(7px)
-
+		+below($xl)
+			&:after
+				position absolute
+				content ''
+				border-radius 50%
+				background $rifleniu
+				width 89px
+				height 89px
+				top 20px
+				right -35px
+				filter blur(7px)
 	&__title
 		padding-top 10rem
 		padding-bottom 4.4rem
 	&__wrap
 		position relative
-		&:before
-		&:after
-			position absolute
-			content ''
-			border-radius 50%
-			background $rifleniu
-		&:before
-			width 37px
-			height 37px
-			top 120px
-			left -10px
-		&:after
-			top 35px
-			left 80px
-			width 15px
-			height 15px
+		+below($xl)
+			&:before
+			&:after
+				position absolute
+				content ''
+				border-radius 50%
+				background $rifleniu
+			&:before
+				width 37px
+				height 37px
+				top 120px
+				left -10px
+			&:after
+				top 35px
+				left 80px
+				width 15px
+				height 15px
 	&__slider
+		+above($xl)
+			max-width 1300px
+			margin 0 auto
 		.swiper
 			&-button
 				display none
@@ -45,53 +49,81 @@
 					box-sizing border-box
 					flex-wrap wrap
 			&-slide
-				width 50%
-				margin-bottom 5.5rem
-				&:first-child
-					width 100%
-					.hero__image-wrap
-						width 18rem
-						height 18rem
-					.hero__value
-						max-width 18rem
-					.hero__wrapper
-						padding-top 4rem
-					.hero__name
-						max-width 22rem
-						left 50%
-						transform translateX(-50%)
+				display block
+				width 20%
+				+below($xl)
+					width 50%
+					margin-bottom 5.5rem
+					&:first-child
+						width 100%
+						.hero__image-wrap
+							width 18rem
+							height 18rem
+						.hero__value
+							max-width 18rem
+						.hero__wrapper
+							padding-top 4rem
+						.hero__name
+							max-width 22rem
+							left 50%
+							transform translateX(-50%)
 	&__container
 		padding 0 1.5rem
 	&__item
-		&_capitan
-			.hero__image-wrap
+		display block
+		+below($xl)
+			&_capitan
+				.hero__image-wrap
+					background $capitan
+			&_hrust
+				.hero__image-wrap
+					background $hrust
+			&_eskimon
+				.hero__image-wrap
+					background $eskimon
+			&_kaktus
+				.hero__image-wrap
+					background $kaktus
+			&_lakomka
+				.hero__image-wrap
+					background $lakomka
+			&_plombirovna
+				.hero__image-wrap
+					background $plombirovna
+			&_raduga
+				.hero__image-wrap
+					background $raduga
+				.hero__value
+					max-height 16rem
+			&_rifleniu
+				.hero__image-wrap
+					background $rifleniu
+			&_rojoker
+				.hero__image-wrap
+					background $rojoker
+		+above($xl)
+			padding 40px 20px
+			border-radius 20px
+			&_capitan
 				background $capitan
-		&_hrust
-			.hero__image-wrap
-				background $hrust
-		&_eskimon
-			.hero__image-wrap
-				background $eskimon
-		&_kaktus
-			.hero__image-wrap
-				background $kaktus
-		&_lakomka
-			.hero__image-wrap
-				background $lakomka
-		&_plombirovna
-			.hero__image-wrap
-				background $plombirovna
-		&_raduga
-			.hero__image-wrap
-				background $raduga
-			.hero__value
-				max-height 16rem
-		&_rifleniu
-			.hero__image-wrap
-				background $rifleniu
-		&_rojoker
-			.hero__image-wrap
-				background $rojoker
+			&_hrust
+					background $hrust
+			&_eskimon
+					background $eskimon
+			&_kaktus
+					background $kaktus
+			&_lakomka
+					background $lakomka
+			&_plombirovna
+					background $plombirovna
+			&_raduga
+					background $raduga
+				.hero__value
+					max-height 16rem
+			&_rifleniu
+					background $rifleniu
+			&_rojoker
+					background $rojoker
 	&__image-wrap
 		width 13rem
 		height 13rem

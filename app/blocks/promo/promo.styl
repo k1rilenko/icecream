@@ -2,14 +2,26 @@
 	padding-top 83px
 	display block
 	background-color $blue
-	background-image url(../images/promo-bg/back.png)
+	background-image url(../images/background-promo.jpg)
 	background-repeat no-repeat
+	background-size cover
+	background-position center bottom
 	position relative
+	overflow hidden
+	+above($xl)
+		background-image url(../images/promo-bg/1.jpg)
+		background-size 100%
+		background-position 0 100%
 	&__title
 		padding-top 4.3rem
 		margin-bottom 3.5rem
+		+above($xl)
+			font-size 4.5rem
+			line-height 1
+			text-align left
+			padding-top 39%
 	&__input-block
-		padding-bottom 40rem
+		// padding-bottom 40rem
 	&__input-wrapper
 		width 25.8rem
 		position relative
@@ -46,14 +58,27 @@
 			color $dgrey
 			text-align center
 			padding-left 45px
+		&-wrapper
+			+above($xl)
+				width 100%
 	&__background
-		width 100%
-		position absolute
-		bottom 0
-		left 0
-		line-height 0
-		&-img
-			display block
+		position relative
+		top -20px
+		display flex
+		justify-content center
+		margin-bottom -20px
+		+above($xl)
+			position absolute
+			top 0
+			left 0
 			width 100%
-			height auto
-			object-fit contain
+			height 100%
+		&-img
+			width 590px
+			+above($xl)
+				width 100%
+				height auto
+	&__content
+		+above($xl)
+			width 380px
+			margin-left auto

@@ -10,4 +10,6 @@ mixin promo()
 							+b('svg').icon._back
 								use(xlink:href='#back')
 		+e.background
-			+e('img').background-img_mobile(src="./assets/images/promo-bg/img-with-logo.png", alt="")
+			+e('picture')
+				source(srcset="./assets/images/promo-bg/2.png" media="(min-width: 1200px)")
+				+e('img').background-img_mobile(src="./assets/images/foreground.png", alt="")

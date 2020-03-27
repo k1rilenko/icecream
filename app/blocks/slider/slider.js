@@ -1,12 +1,12 @@
+/* eslint-disable no-unused-vars */
 app.slider = {
 	init() {
-		app.common.initScript('swiper.min', 'mySwiper', () => {
-			const sliderRules = new Swiper('.swiper-rules', this.options);
-			this.runSlider('.rating__slider .swiper-container', this.optionsRating);
-			this.runSlider('.swiper-gifts', this.options);
-		});
+		const ruleSlider = new Swiper('.swiper-rules', this.options);
+		const heroSlider = new Swiper('.hero__slider .swiper-container', this.optionsHero);
+		this.runSlider('.rating__slider .swiper-container', this.optionsRating);
+		this.runSlider('.swiper-gifts', this.options);
+		this.destroySlider(ruleSlider, 1280);
 		app.common.initStyle('swiper.min');
-		this.destroyRulesSlider();
 	},
 	runSlider(selector, options) {
 		const slider = new Swiper(selector, options);
@@ -29,9 +29,21 @@ app.slider = {
 		centeredSlides: true,
 		spaceBetween: 10
 	},
-	destroyRulesSlider() {
-		if (window.innerWidth > 1280) {
-			sliderRules.destroy();
-		}
+	optionsHero: {
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		loop: true
+	},
+	destroySlider(el, size) {
+		window.addEventListener('resize', () => {
+			if (window.innerWidth > size) {
+				el.destroy(true, true);
+			}
+		});
+		window.addEventListener('load', () => {
+			if (window.innerWidth > size) {
+				el.destroy(true, true);
+			}
+		});
 	}
 };
