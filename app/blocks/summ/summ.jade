@@ -1,0 +1,9 @@
+mixin summ(hero)
+	+b.summ&attributes(attributes)(class="gradient_#{hero.gradient}")
+		+e.wrapper
+			for item in hero.summ
+				+e.row
+					+e('p').title.sub= item[0]
+					+e('p').text= item[1]
+		+e.background
+			+e('img').background-image(src="./assets/images/background/#{hero.background}")

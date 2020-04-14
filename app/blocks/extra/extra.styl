@@ -1,0 +1,39 @@
+.extra
+	display block
+	overflow hidden
+	&__wrapper
+		display flex
+		flex-direction column
+		+above($md)
+			flex-direction row-reverse
+	&__block
+		position relative
+		display flex
+		flex-direction column
+		align-items center
+		padding 5.5rem 0
+		+above($md)
+			flex-basis 50%
+			&:last-child
+				border-right 2px dashed $grey
+				border-bottom 2px dashed $grey
+		&_weapon
+			border-bottom 2px dashed $grey
+	&__image-block
+		max-width 25rem
+		margin 0 auto
+		margin-bottom 2.5rem
+		position relative
+		+above($xl)
+			max-width 35rem 
+	&__image
+		width 100%
+		+above($md)
+			width auto 
+			max-height 20rem
+		+above($xl)
+			max-height 35rem
+	&__lable
+		font-size 1.8rem
+		line-height 1.39
+		margin-bottom 1.3rem

@@ -1,0 +1,39 @@
+mixin top()
+	+b.top&attributes(attributes)
+		+e.head
+			+e.icon
+				svg(width='56', height='46', viewbox='0 0 56 46', fill='none', xmlns='http://www.w3.org/2000/svg')
+					rect(x='1.5', y='26.1313', width='13', height='18', rx='1', stroke='url(#paint0_linear)', stroke-width='2')
+					rect(x='21.5', y='16.1313', width='13', height='28', rx='1', stroke='url(#paint1_linear)', stroke-width='2')
+					rect(x='40.5', y='0.131348', width='15', height='45', rx='2', fill='url(#paint2_linear)')
+					defs
+						lineargradient#paint0_linear(x1='15.5', y1='25.1313', x2='2.85728', y2='46.3935', gradientunits='userSpaceOnUse')
+							stop(stop-color='#FCFF71')
+							stop(offset='1', stop-color='#FFC632')
+						lineargradient#paint1_linear(x1='35.5', y1='15.1313', x2='14.0557', y2='39.1743', gradientunits='userSpaceOnUse')
+							stop(stop-color='#FCFF71')
+							stop(offset='1', stop-color='#FFC632')
+						lineargradient#paint2_linear(x1='55.5', y1='0.131346', x2='24.4477', y2='23.3415', gradientunits='userSpaceOnUse')
+							stop(stop-color='#FCFF71')
+							stop(offset='1', stop-color='#FFC632')
+			+e('h2').title.title Рейтинг участников
+			+e('p').subtitle Копи баллы и поднимайся на вершину Олимпа!
+		+e.wrapper
+			+e.block._text
+				+e.table
+					+e('div').table-head
+						+e('div').table-row
+							+e('div').table-date Место
+							+e('div').table-date Имя
+							+e('div').table-date Баллы
+					+e('div').table-body
+						-for (var i = 0; i < 5; i++) {
+							+e('div').table-row
+								+e('div').table-date._number= i+1
+								+e('div').table-date._name Lorem ipsum, dolor sit amet consectetur adipisicing.
+								+e('div').table-date._point 2345823
+						- }
+				+e.link-block
+					+e('a').link(href="./top.html") Топ 100
+			+e.block_background
+				+e('img').image(src="./assets/images/top-bg.png")

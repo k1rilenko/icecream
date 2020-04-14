@@ -1,0 +1,255 @@
+.rating
+	display block
+	margin-bottom 4rem
+	position relative
+	&__head
+		text-align center
+	&__icon
+		margin-bottom 4.1rem
+	&__title
+		margin-bottom 1.6rem
+		padding 0 20%
+	&__subtitle
+		font-family $r
+		font-size 1.8rem
+		line-height 1.39
+		margin-bottom 5.2rem
+	&__item
+		text-decoration none
+		&_capitan
+			.rating__image-wrap
+				background $capitan
+				&:before
+				&:after
+					background $capitan
+		&_hrust
+			.rating__image-wrap
+				background $hrust
+				&:before
+				&:after
+					background $hrust
+		&_eskimon
+			.rating__image-wrap
+				background $eskimon
+				&:before
+				&:after
+					background $eskimon
+		&_kaktus
+			.rating__image-wrap
+				background $kaktus
+				&:before
+				&:after
+					background $kaktus
+		&_lakomka
+			.rating__image-wrap
+				background $lakomka
+				&:before
+				&:after
+					background $lakomka
+		&_plombirovna
+			.rating__image-wrap
+				background $plombirovna
+				&:before
+				&:after
+					background $plombirovna
+		&_raduga
+			.rating__image-wrap
+				background $raduga
+				&:before
+				&:after
+					background $raduga
+		&_rifleniu
+			.rating__image-wrap
+				background $rifleniu
+				&:before
+				&:after
+					background $rifleniu
+		&_rojoker
+			.rating__image-wrap
+				background $rojoker
+				&:before
+				&:after
+					background $rojoker
+	&__image-wrap
+		position relative
+		width 28.6rem
+		height 28.6rem
+		border-radius 50%
+		margin-bottom 1.7rem
+		margin-left auto
+		margin-right auto
+		&:before
+		&:after
+			position absolute
+			content ''
+			border-radius 50%
+		&:before
+			left 0
+			top 10px
+			width 37px
+			height 37px
+		&:after
+			left 45px
+			top 0
+			width 13px
+			height 13px
+		+below($xl)
+			width 24rem
+			height 24rem
+		+above($xl)
+			margin-left auto
+			margin-right auto
+	&__value
+		max-height 286px
+		+below($xl)
+			max-height 242px
+	&__name
+		position absolute
+		max-width 250px
+		bottom 15px
+		left 50%
+		transform translateX(-50%)
+	&__num-value
+		display flex
+		flex-direction column
+	&__percent
+		margin-bottom 1.3rem
+		font-family $bor
+		font-size 4.5rem
+		color $b
+	&__point
+		font-size 2rem
+		line-height 3rem
+		color $blue
+		margin-bottom 2.3rem
+	&__slider
+		padding-bottom 5rem
+		+above($lg)
+			max-width 1000px
+			margin 0 auto
+		+above($xl)
+			max-width 1200px
+			margin 0 auto
+		+above($xxl)
+			max-width 1600px
+			margin 0 auto
+		.swiper-pagination
+			position relative
+			bottom 0
+			padding-top 3.9rem
+			margin-top 3.9rem
+			z-index 4
+		.swiper
+			&-pagination-bullet
+				width 1.5rem
+				height 1.5rem
+				background-color $grey
+				border-radius 50%
+				opacity 1
+				margin .375rem
+				border 2.5px solid transparent
+				transition .3s
+				&.swiper-pagination-bullet-active
+					background linear-gradient(195.7deg, #FFD84F -.15%, #FF8A00 100%)
+					border-color $grey
+					transform scale(1.5)
+			&-button
+				display none
+				+above($md)
+					display flex
+					justify-content center
+					align-items center
+					width 6rem
+					height 6rem
+					border-radius 50%
+					background $w
+					border 2px solid $grey
+					transition .3s
+					box-shadow 0 5px 15px transparent
+					top 30%
+					&:after
+						display none
+					&.swiper-button-prev
+						transform scale(-1, 1)
+					&.swiper-button-next
+						.icon
+							margin-left 4px
+					&:hover
+						background linear-gradient(283.38deg, #008EF4 0, #63D4FF 100%, #63D4FF 100%)
+						box-shadow 0 5px 15px rgba(44, 173, 250, .37)
+						border-color $w
+						.icon
+							stroke $w
+				+above($xxl)
+					top 27%
+			&-slide
+				transition .5s
+				.rating__image-wrap_capitan
+					.rating__name
+						bottom -2rem
+				.rating__name
+					opacity 0
+					transition opacity .3s
+				.rating__image-wrap:before, .rating__image-wrap:after
+					opacity 0
+					transition opacity .3s
+				.rating__num-value
+					opacity 0
+					transition opacity .3s
+				.rating__button-wrapper
+					opacity 0
+					transition opacity .3s
+					display flex
+					justify-content center
+					align-items center
+				&.swiper-slide-active
+					z-index 3
+					transform translateY(2rem)
+					.rating__image-wrap:before, .rating__image-wrap:after
+						opacity 1
+					.rating__name
+						opacity 1
+					.rating__num-value
+						opacity 1
+					.rating__button-wrapper
+						opacity 1
+				&:not(.swiper-slide-prev):not(.swiper-slide-next):not(.swiper-slide-nth-prev-2):not(.swiper-slide-nth-next-2):not(.swiper-slide-active)
+					// overflow hidden
+					transform scale(0)
+					opacity 0
+				&.swiper-slide-prev, &.swiper-slide-next
+					opacity .8
+					transform scale(.8)
+					z-index 2
+				&.swiper-slide-nth-prev-2, &.swiper-slide-nth-next-2
+					opacity .4
+					transform scale(.6)
+					z-index 1
+				&.swiper-slide-prev
+					+above($lg)
+						transform translate(6rem) scale(.8)
+					+above($xl)
+						transform translate(5rem) scale(.8)
+					+above($xxl)
+						transform translate(10rem) scale(.8)
+				&.swiper-slide-next
+					+above($lg)
+						transform translate(-6rem) scale(.8)
+					+above($xl)
+						transform translate(-5rem) scale(.8)
+					+above($xxl)
+						transform translate(-10rem) scale(.8)
+				&.swiper-slide-nth-prev-2
+					+above($lg)
+						transform translate(15rem) scale(.6)
+					+above($xl)
+						transform translate(15rem) scale(.6)
+					+above($xxl)
+						transform translate(25rem, -2rem) scale(.6)
+				&.swiper-slide-nth-next-2
+					+above($lg)
+						transform translate(-15rem) scale(.6)
+					+above($xl)
+						transform translate(-15rem) scale(.6)
+					+above($xxl)
+						transform translate(-25rem, -2rem) scale(.6)

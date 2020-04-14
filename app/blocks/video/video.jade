@@ -1,0 +1,7 @@
+mixin video()
+	+b.video&attributes(attributes)
+		+e('video').block(autoplay, playsinline="playsinline" muted='muted', loop, poster="./assets/images/video.png")
+			source(src='./assets/videos/.webm' type='video/webm')
+			source(src='./assets/videos/.mp4' type='video/mp4')
+			source(src='./assets/videos/.ogv' type='video/ogg')
+		+e.overlay

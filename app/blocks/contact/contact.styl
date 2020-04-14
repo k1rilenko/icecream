@@ -1,0 +1,67 @@
+.contact
+	display block
+	+above($xxl)
+		max-width 120rem 
+		margin 0 auto 
+	&__wrapper
+		display flex
+		flex-direction column-reverse
+		position relative
+		+above($xl) 
+			padding-bottom 7rem
+	&__links
+		+above($xl) 
+			position absolute
+			left 14rem
+			top 4rem
+		+above($xxl)
+			left 10rem
+		&-href
+			text-decoration none
+			display flex
+			padding 3.25rem 1.5rem
+			border-top 2px solid $grey
+			align-items center
+			+above($xl) 
+				border none 
+				padding 1rem 1.5rem
+		&-icon
+			margin-right 2.7rem
+		&-text
+			font-size 1.4rem
+			line-height 1.43
+			font-weight 700
+			transition .3s
+			&:hover 
+				color $blue
+			+above($xl)
+				color $b
+	&__data
+		&-list
+			padding 0 3.5rem
+			+above($xl) 
+				display flex
+				justify-content flex-end
+		&-href
+			display flex
+			flex-direction column
+			padding 3.7rem 2rem 3.3rem
+			text-decoration none
+			&:hover 
+				.contact__data-value
+					color $blue
+			+above($xl)
+				padding 3.7rem 4rem 3.3rem
+		&-item
+			border-bottom 2px solid $grey
+			&:last-child
+				border-bottom-color transparent
+			+above($xl) 
+				border none
+		&-value
+			font-size 2.2rem
+			line-height 1.36
+			color $b
+			transition .3s
+		&-icon
+			margin-bottom 1.6rem

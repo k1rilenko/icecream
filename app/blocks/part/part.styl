@@ -1,0 +1,23 @@
+.part
+	display block
+	background-color #F3F3F3
+	background-image url(../images/pattern.svg)
+	&__wrapper
+		display flex
+		justify-content center
+		position relative
+		padding 8rem 0
+		+above($xl)
+			max-width 89rem
+			margin 0 auto
+	&__back
+		position absolute
+		display none
+		+above($lg)
+			display block
+			bottom 0
+			left 0
+		&_side
+			+above($xl)
+				left auto
+				right 0

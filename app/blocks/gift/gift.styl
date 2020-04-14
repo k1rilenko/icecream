@@ -1,0 +1,160 @@
+.gift
+	display block
+	position relative
+	overflow hidden
+	&__icecream 
+		display none
+		+above($lg)
+			display block
+			position absolute
+			z-index 2
+			pointer-events none
+			&.left
+				left 0 
+				top 30%
+				+above($lg)
+					max-width 110px
+				+above($xxl)
+					max-width 140px
+			&.right
+				right 0
+				bottom 20%
+				+above($lg)
+					max-width 200px
+				+above($xxl)
+					max-width 260px		
+			&.bottom
+				bottom -8rem
+				left 50%
+				+above($lg)
+					max-width 265px
+					transform translateX(-50%)
+				+above($xxl)
+					max-width 370px
+					transform translateX(0)
+	&__background
+		position absolute
+		top 20px
+		width 100%
+		svg
+			width 100%
+			height 300px
+		+above($md)
+			top 15rem
+	&__title
+		position relative
+		z-index 3
+		margin-bottom 1rem
+	&__subtitle
+		padding 0 1.5rem
+		text-align center
+		position relative
+		z-index 3
+		font-size 2rem
+		line-height 1.5
+		margin-bottom 4rem
+		br 
+			display none 
+		+above($md)
+			margin-bottom 10rem
+			br 
+				display block
+	&__slider
+		background linear-gradient(342.98deg, #63D4FF -13.23%, #008EF4 87.33%)
+		padding-bottom 3rem
+		.sub 
+			max-width 100%
+		+above($md)
+			.swiper-pagination
+				display none
+			.swiper-wrapper 
+				max-width 700px 
+				margin 0 auto
+				+above($md)
+					flex-direction row
+					flex-wrap wrap
+					.swiper-slide
+						flex-basis calc(50% - 2rem)	
+						margin 1rem
+		+above($lg)
+			padding-bottom 13rem
+			.swiper-wrapper 
+				max-width 1200px
+				margin 0 auto
+				padding-bottom 2rem
+				+above($lg)
+					flex-direction row
+					flex-wrap wrap
+					.swiper-slide
+						flex-basis calc(33% - 2rem)
+						margin 1rem
+					& + .swiper-pagination
+						display none
+		.swiper
+			&-slide
+				height 455px
+				text-decoration none
+				color $b
+				transition .3s
+				&:hover
+					transform scale(1.02)
+			&-pagination
+				position relative
+				padding-top 3.7rem
+				&-bullet
+					margin 0 5px
+					width 10px
+					height 10px
+					background-color $w
+					opacity 1
+					&-active
+						box-shadow 0 0 0 2.5px $w
+					&:first-child
+						&.swiper-pagination-bullet-active
+							background $kaktus
+					&:nth-child(2)
+						&.swiper-pagination-bullet-active
+							background $plombirovna
+					&:nth-child(3)
+						&.swiper-pagination-bullet-active
+							background $raduga
+					&:nth-child(4)
+						&.swiper-pagination-bullet-active
+							background linear-gradient(204.03deg, #8A3918 0, #622C18 99.52%)
+					&:nth-child(5)
+						&.swiper-pagination-bullet-active
+							background $plombirovna
+					&:nth-child(6)
+						&.swiper-pagination-bullet-active
+							background $kaktus
+					&:nth-child(7)
+						&.swiper-pagination-bullet-active
+							background $capitan
+		.slider__container
+			background-color $w
+			border-radius 16px
+			height 100%
+			padding-top 5rem
+			box-shadow 0 1px 1px rgba(0, 56, 166, .08), 0 2px 2px rgba(0, 56, 166, .08), 0 4px 4px rgba(0, 56, 166, .08), 0 8px 8px rgba(0, 56, 166, .08), 0 16px 16px rgba(0, 56, 166, .08)
+			+above($xl)
+				border-radius 20px
+		.slider__wrapper
+			display flex
+			height 100%
+			flex-direction column
+		.slider__value
+			width 200px
+			position absolute
+			bottom 0
+		.slider__image-wrap
+			margin-top 5rem
+			width 200px
+			height 200px
+			position relative
+			margin 0 auto
+			margin-bottom 4rem
+		.slider__text-block
+			padding 0 2rem
+			text-align center
+		.slider__sub
+			margin-bottom 2rem

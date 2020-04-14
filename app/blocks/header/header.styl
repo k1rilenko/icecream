@@ -1,0 +1,106 @@
+.header
+	display block
+	position fixed
+	width 100%
+	z-index 14
+	transition .3s
+	&__wrapper
+		display flex
+		justify-content space-between
+		align-items center
+		padding 5px 0
+		+below($sm)
+			padding 5px 0
+		+above($md)
+			padding 8px 0
+			.header__logo-image
+				max-height 9rem
+		+above($xl)
+			padding 8px 0
+		+above($xxl)
+			padding 10px 0
+	&__back
+		position relative
+		width 50px
+		height 50px
+		border-radius 50%
+		box-shadow 0 2px 5px rgba(0, 79, 136, .2)
+		background-color $w
+		border none
+		.icon
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%, -50%)
+	&__logo-image
+		+below($sm)
+			max-width 10rem
+		+above($xl)
+			max-width 12.6rem
+		+above($xxl)
+			max-width 16.8rem
+	&__login-button
+		font-family $bor
+		padding 16px 0 9px
+		width 100px
+		font-size 2.2rem
+		transition .3s
+		color $b
+		border-radius 25px
+		background-color $w
+		box-shadow 0 2px 5px rgba(0, 79, 136, .2)
+		border none
+		display flex
+		align-items center
+		justify-content center
+		+above($xl)
+			width 11rem
+			padding 21px 0 14px
+
+		&:hover
+			color $blue
+	&__user
+		display flex
+		align-items center
+		&-wrapper
+			width 50px
+			height 50px
+			border 3px solid $w
+			border-radius 50%
+			box-shadow: 0 2px 5px rgba(0, 79, 136, .2)
+			overflow hidden
+			background $w
+		&-icon
+			width 100%
+			height 100%
+			object-fit contain
+		&-name
+			font-weight 700
+			font-size 1.6rem
+			line-height 3rem
+			color $b
+			margin-right 1.4rem
+	&__link
+		display flex
+		align-items center
+		justify-content flex-end
+		width 100%
+		height 5rem
+		border-right 2px solid $grey
+		margin-right 4.5rem
+		+below($lg)
+			display none
+		&-item
+			margin-right 3.5rem
+			display flex
+		&-href
+			text-decoration none
+			font-size 1.8rem
+			font-weight bold
+			color $b
+			transition .3s
+			&:hover
+				color $blue
+	// &__container
+	// 	&.active
+	// 		background $w

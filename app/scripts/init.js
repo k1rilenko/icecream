@@ -1,4 +1,9 @@
 app.common.init();
-app.sliderServices.init();
-app.sliderServices2.init();
+app.header.init();
+app.scroll.init();
 app.fancyboxExample.init();
+app.slider.init();
+app.enter.init();
+app.questions.init();
+app.map.mapLoading();
+app.votePopup.init();

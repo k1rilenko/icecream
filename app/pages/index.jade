@@ -1,15 +1,32 @@
 extends /blocks/layout-default/layout-default
 
-include /blocks/slider-services/slider-services
-include /blocks/slider-services-2/slider-services-2
-include /blocks/fancybox-example/fancybox-example
+include /blocks/header/header
+include /blocks/promo/promo
+include /blocks/sprite/sprite
+include /blocks/rules/rules
+include /blocks/part/part
+include /blocks/hero/hero
+include /blocks/rating/rating
+include /blocks/video/video
+include /blocks/gift/gift
+include /blocks/top/top
+include /blocks/footer/footer
+include /blocks/scroll/scroll
 
 block head
 	- var pageTitle = 'Project Template';
 
 block content
-	.container(style="width: 1000px; margin: 0 auto")
-		h1 ololos
-		+fancybox-example
-		+slider-services
-		+slider-services-2
+	+sprite
+	+header(false, true, true)
+	+promo
+	+rules
+	+part('part1.png', 'part2.png')
+	+hero
+	+rating
+	+video
+	+gift
+	+part('part3.png')
+	+top
+	+footer
+	+scroll

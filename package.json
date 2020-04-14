@@ -122,6 +122,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "fancybox": "^3.0.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^5.3.6"
   }
 }

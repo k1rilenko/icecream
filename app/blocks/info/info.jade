@@ -1,0 +1,24 @@
+mixin info()
+	+b.info&attributes(attributes)
+		+e.wrapper
+			+e.link-block
+				+e.container
+					+e('ul').link-list
+						+e('li').link-item
+							+e('a').link-href(href="#")
+								+e('span').link-title Где купить
+								+b('svg').icon._link
+									use(xlink:href='#link-arrow')
+						+e('li').link-item
+							+e('a').link-href(href="#")
+								+e('span').link-title Вопросы и ответы
+								+b('svg').icon._link
+									use(xlink:href='#link-arrow')
+			+e.promo
+				+e.promo-img-block
+					+e('img').promo-image(src="./assets/images/info-bg.jpg")
+					+e('img').promo-image.xl(src="./assets/images/info-bg-xl.jpg")
+					+e.promo-overlay
+				+e.promo-content
+					+e('img').promo-logo(src="./assets/images/logo.png")
+					+e('p').promo-text «Чистая Линия» — натуральное мороженое <br> из свежего молока и сливок.

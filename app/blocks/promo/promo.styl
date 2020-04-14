@@ -1,0 +1,129 @@
+.promo
+	padding-top 83px
+	display block
+	background-color $blue
+	background-image url(../images/background-promo.jpg)
+	background-repeat no-repeat
+	background-size cover
+	background-position center bottom
+	position relative
+	overflow hidden
+	+below($xl)
+		min-height 69rem
+	+above($lg)
+		padding-top 0
+	+above($xl)
+		background-image url(../images/promo-bg/1.jpg)
+		background-size 100%
+		background-position 0 100%
+		min-height 69rem
+	+above($xxl)
+		min-height 100rem
+	&__title
+		padding-top 4.3rem
+		margin-bottom 3.5rem
+		position relative
+		z-index 2
+		+above($xl)
+			font-size 4.5rem
+			line-height 1
+			text-align left
+			padding-top 0
+			margin-bottom 5rem
+		+above($xxl)
+			margin-bottom 5rem
+	&__input-block
+		// padding-bottom 40rem
+	&__input-wrapper
+		width 25.8rem
+		position relative
+		margin 0 auto
+		border-radius 10px
+		background-image linear-gradient(204.03deg, #2BA6FF 0, #82DCFF 100%)
+		padding 4px
+		z-index 2
+	&__button
+		position absolute
+		right 14px
+		top 50%
+		transform translateY(-50%) rotate(180deg)
+		background $grey
+		box-shadow 0 5px 10px transparent
+		transition .3s
+		&:hover
+			background linear-gradient(204.03deg, #FFC2E3 0, #CD6ECF 100%)
+			box-shadow 0 -5px 10px rgba(216, 128, 212, .6)
+			.icon_back
+				stroke $w
+	&__input
+		width 100%
+		// height 7.5rem
+		font-family $bor
+		font-size 2.5rem
+		line-height 2
+		border-radius 10px
+		border none
+		outline none
+		padding 5px 65px 10px 20px
+		color $b
+		height auto 
+		&::placeholder
+			font-family $r
+			font-size 2rem
+			color $dgrey
+			padding-left 55px
+			+above($lg)
+				padding-left 55px
+			+above($xl)
+				padding-left 118px
+			+above($xxl)
+				padding-left 118px
+		& + .promo__button 
+			display none
+		&:focus 
+			& + .promo__button 
+				display block
+		&-wrapper
+			+above($xl)
+				width 100%
+	&__background
+		position relative
+		top -20px
+		display flex
+		justify-content center
+		margin-bottom -20px
+		+above($xl)
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+		&-img
+			width 590px
+			+above($sm)
+				width 100%
+				height auto 
+			+above($lg)
+				height 100%
+				object-fit cover
+		picture 
+			+above($lg)
+				width 100%
+		
+	&__content
+		+above($lg)
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			z-index 2
+		+above($xl)
+			width 380px
+			margin-left auto
+			position absolute
+			top 48% 
+			right 3.5%
+			transform translateY(-50%)		
+		+above($xxl)
+			top 50%
+			right 13%

@@ -1,0 +1,21 @@
+mixin slider(data, pagination = true, buttons, scrollBar)
+	+b.slider&attributes(attributes)
+		.swiper-container.swiper-rules
+			.swiper-wrapper(style="width: 100%")
+				for slide in getData(data)
+					.swiper-slide
+						+e('div').container
+							+e('div').wrapper
+								+e('div').image-wrap
+									+e('img').value(src="./assets/images/#{slide.image}" alt="")
+								+e('span').num= slide.num
+								+e('h3').rule.sub= slide.rule
+								if slide.text
+									+e('p').text= slide.text
+		if pagination
+			.swiper-pagination
+		if buttons
+			.swiper-button-prev
+			.swiper-button-next
+		if scrollBar
+			.swiper-scrollbar
