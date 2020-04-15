@@ -40,7 +40,7 @@ app.votePopup = {
 					const slideIndex = document.getElementById(dataSlide).dataset.slideIndex;
 					app.slider.voteSlider.slideTo(slideIndex, 1000, false);
 				}); // end event listener
-			}  // end for
+			} // end for
 		}); // end ajaxComplete
 	}
 };
