@@ -1,13 +1,12 @@
-/* eslint-disable prefer-const */
 /* eslint-disable no-loop-func */
 /* eslint-disable arrow-parens */
 /* eslint-disable no-unused-vars */
-app.votePopup = {
+app.giftPopup = {
 	init() {
-		const votePopupBtn = document.querySelectorAll('.rating__button');
+		const giftPopupBtn = document.querySelectorAll('.gift-modal');
 		const showPopup = () => {
 			$.fancybox.open({
-				src: './vote-popup.html',
+				src: './gift-popup.html',
 				type: 'ajax',
 				opts: {
 					smallBtn: false,
@@ -17,28 +16,27 @@ app.votePopup = {
 				}
 			});
 		};
-
-		for (let i = 0; i < votePopupBtn.length; i++) {
-			let button = votePopupBtn[i];
+		for (let i = 0; i < giftPopupBtn.length; i++) {
+			let button = giftPopupBtn[i];
 			button.addEventListener('click', (event) => {
 				event.preventDefault();
 				showPopup();
 				const btnIndex = button.dataset.slideIndex;
 				$(document).ajaxComplete(function () {
-					app.slider.voteSlider.slideTo(btnIndex, 1000, false);
+					app.slider.giftSlider.slideTo(btnIndex, 1000, false);
 				});
 			});
 		}
-
 		$(document).ajaxComplete(function () {
-			const votePopupHeroLink = document.querySelectorAll('.hero-list__link');
-			for (let i = 0; i < votePopupHeroLink.length; i++) {
-				let link = votePopupHeroLink[i];
+			const giftPopupHeroLink = document.querySelectorAll('.gift-list__link');
+			for (let i = 0; i < giftPopupHeroLink.length; i++) {
+				let link = giftPopupHeroLink[i];
 				link.addEventListener('click', (event) => {
 					event.preventDefault();
 					const dataSlide = link.dataset.slide;
-					const slideIndex = document.getElementById(dataSlide).dataset.slideIndex;
-					app.slider.voteSlider.slideTo(slideIndex, 1000, false);
+					const slideIndex = document.getElementById('gift_' + dataSlide).dataset.slideIndex;
+					console.log(slideIndex);
+					app.slider.giftSlider.slideTo(slideIndex, 1000, false);
 				});
 			}
 		});
