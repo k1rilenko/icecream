@@ -27,7 +27,7 @@ app.slider = {
 				slidesPerView: 1,
 				spaceBetween: 10,
 				grabCursor: true,
-				// autoHeight: true,
+				effect: 'fade',
 				on: {
 					init() {
 						const activeSlide = 'gradient_' + document.querySelector('.vote-popup-slider .swiper-slide-active').dataset.slide;
