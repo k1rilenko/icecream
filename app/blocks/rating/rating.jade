@@ -34,9 +34,7 @@ mixin rating()
 											+e('span').point= slide.point + " голосов"
 										+e.button-wrapper
 											+e('button')(data-src="#{slide.background}" data-slide-index="#{index}").button.button._success Голосовать
- 
 					.swiper-pagination
-
 					.swiper-button-prev.swiper-button
 						+b('svg').icon._link
 							use(xlink:href='#link-arrow')

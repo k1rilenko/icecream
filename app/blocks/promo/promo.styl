@@ -1,28 +1,22 @@
 .promo
 	padding-top 83px
 	display block
-	top 0
-	height 100vh
-	width 100vw
 	background-color $blue
 	background-image url(../images/background-promo.jpg)
 	background-repeat no-repeat
 	background-size cover
 	background-position center bottom
-	position fixed
+	position relative
 	overflow hidden
-	z-index -1
-	+below($xl)
-		min-height 69rem
+	height 100vh
+	+below($lg)
+		height auto
 	+above($lg)
 		padding-top 0
 	+above($xl)
 		background-image url(../images/promo-bg/1.jpg)
 		background-size 100%
 		background-position 0 100%
-		min-height 69rem
-	+above($xxl)
-		min-height 100rem
 	&__title
 		padding-top 4.3rem
 		margin-bottom 3.5rem
@@ -42,7 +36,7 @@
 		width 25.8rem
 		position relative
 		margin 0 auto
-		border-radius 13px
+		border-radius 10px
 		background-image linear-gradient(204.03deg, #2BA6FF 0, #82DCFF 100%)
 		padding 4px
 		z-index 2
@@ -68,7 +62,7 @@
 		border-radius 10px
 		border none
 		outline none
-		padding 18px 65px 12px 20px
+		padding 5px 65px 10px 20px
 		color $b
 		height auto 
 		&::placeholder
@@ -96,6 +90,10 @@
 		display flex
 		justify-content center
 		margin-bottom -20px
+		height 100%
+		+below($xl)
+			top 0 
+			margin-bottom 0
 		+above($xl)
 			position absolute
 			top 0
