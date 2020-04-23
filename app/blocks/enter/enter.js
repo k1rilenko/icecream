@@ -10,6 +10,9 @@ app.enter = {
 		});
 		$(document).ajaxComplete(function () {
 			const resetBtn = document.querySelector('.reset-pswd');
+			if (!resetBtn) {
+				return;
+			}
 			const popupWrapper = document.querySelectorAll('.popup__wrapper');
 			resetBtn.addEventListener('click', e => {
 				e.preventDefault();

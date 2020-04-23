@@ -37,18 +37,11 @@ app.scroll = {
 		};
 
 		if (document.documentElement.clientWidth >= 1280 && firstSection) {
-			let isEvent = false;
 			$(firstSection).on('mousewheel DOMMouseScroll', event => {
-				if (!isEvent) {
-					event.preventDefault();
-					const wheelDelta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-					if (wheelDelta < 0) {
-						window.scrollTo({
-							top: secondSection.offsetTop - 100,
-							behavior: 'smooth'
-						});
-					}
-					isEvent = true;
+				event.preventDefault();
+				const wheelDelta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+				if (wheelDelta < 0) {
+					secondSection.scrollIntoView({behavior: 'smooth'});
 				}
 			});
 		}

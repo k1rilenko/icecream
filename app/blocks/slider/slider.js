@@ -114,7 +114,8 @@ app.slider = {
 				slidesPerView: 1,
 				spaceBetween: 10,
 				grabCursor: true,
-				autoHeight: true
+				autoHeight: true,
+				effect: 'fade'
 			});
 		});
 		window.addEventListener('load', () => {
@@ -173,14 +174,12 @@ app.slider = {
 		pagination: '.rating__slider .swiper-pagination',
 		paginationClickable: true,
 		effect: 'coverflow',
-		grabCursor: true,
+		grabCursor: false,
 		centeredSlides: true,
 		slidesPerView: 'auto',
 		loop: true,
 		speed: 1000,
-		autoplay: {
-			delay: 3000
-		},
+		allowTouchMove: false,
 		coverflowEffect: {
 			rotate: 0,
 			stretch: 60,
@@ -196,6 +195,7 @@ app.slider = {
 			init() {
 				setTimeout(() => {
 					app.slider.ratingSlider.update();
+					app.slider.ratingSlider.slideNext();
 				}, 500);
 				const activeIndex = this.activeIndex;
 				const realIndex = this.slides.eq(activeIndex).attr('data-swiper-slide-index');
@@ -219,10 +219,8 @@ app.slider = {
 		centeredSlides: true,
 		slidesPerView: 'auto',
 		loop: true,
-		speed: 1000,
-		autoplay: {
-			delay: 3000
-		},
+		observer: true,
+		observeParents: true,
 		coverflowEffect: {
 			rotate: 0,
 			depth: 100,
@@ -239,11 +237,6 @@ app.slider = {
 					stretch: 80
 				}
 			},
-			1280: {
-				coverflowEffect: {
-					stretch: 80
-				}
-			},
 			1630: {
 				coverflowEffect: {
 					stretch: 60
@@ -255,7 +248,6 @@ app.slider = {
 				setTimeout(() => {
 					app.slider.heroSlider.update();
 					app.slider.heroSlider.slideNext();
-					app.slider.heroSlider.autoplay.start();
 				}, 500);
 				const activeIndex = this.activeIndex;
 				const realIndex = this.slides.eq(activeIndex).attr('data-swiper-slide-index');
@@ -263,9 +255,11 @@ app.slider = {
 				$('.hero__slider .swiper-slide[data-swiper-slide-index="' + realIndex + '"]').next().next().addClass('swiper-slide-nth-next-2');
 			},
 			slideChange() {
+				app.slider.heroSlider.updateSize();
 				const activeIndex = this.activeIndex;
 				const realIndex = this.slides.eq(activeIndex).attr('data-swiper-slide-index');
-				$('.hero__slider .swiper-slide').removeClass('swiper-slide-nth-prev-2 swiper-slide-nth-next-2');
+				$('.hero__slider .swiper-slide.swiper-slide-nth-prev-2').removeClass('swiper-slide-nth-prev-2');
+				$('.hero__slider .swiper-slide.swiper-slide-nth-next-2').removeClass('swiper-slide-nth-next-2');
 				$('.hero__slider .swiper-slide[data-swiper-slide-index="' + realIndex + '"]').prev().prev().addClass('swiper-slide-nth-prev-2');
 				$('.hero__slider .swiper-slide[data-swiper-slide-index="' + realIndex + '"]').next().next().addClass('swiper-slide-nth-next-2');
 			}
