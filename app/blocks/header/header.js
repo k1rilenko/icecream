@@ -19,7 +19,7 @@ app.header = {
 	},
 	loginPopup() {
 		const headerLoginBtn = document.querySelector('.header__login-button');
-		if(!headerLoginBtn) {
+		if (!headerLoginBtn) {
 			return;
 		}
 		headerLoginBtn.addEventListener('click', event => {
@@ -57,11 +57,11 @@ app.header = {
 			let button = linkScroll[i];
 			button.addEventListener('click', (event) => {
 				event.preventDefault();
-				const blockID = button.getAttribute('href')
+				const blockID = button.getAttribute('href');
 				document.querySelector(blockID).scrollIntoView({
 					behavior: 'smooth',
 					block: 'start'
-				})
+				});
 			});
 		}
 	}
