@@ -155,9 +155,6 @@ app.slider = {
 				if (window.innerWidth < 992) {
 					app.slider.rulesSlider.init();
 				}
-				if (window.innerWidth < 992) {
-					app.slider.rulesSlider.init();
-				}
 			}
 		}
 	},

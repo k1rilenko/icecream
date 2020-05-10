@@ -43,13 +43,16 @@
 				height 28rem
 				margin 0 auto 
 				margin-bottom 4rem
+				+below($sm)
+					padding-top 2rem
+					margin-bottom 2rem
 				&-value 
 					max-width 100%
 					height auto
 					max-height 100%
 					margin 0 auto
 			.vote-popup__form
-				padding 10px
+				padding 10px 35px
 				&-wrapper 
 					max-width 100%
 		+below($sm)
@@ -100,13 +103,27 @@
 		padding 0 5px
 	&__title
 		margin-bottom 1.7rem
+		+below($sm)
+			font-size 2.2rem
+			line-height 2.5rem
+			margin-bottom 0
 	&__text
 		margin-bottom 3.9rem
 		text-align center
 		font-size 1.8rem
 		line-height 1.39
+		+below($sm)
+			margin-bottom 3rem
+	.form__input-wrapper
+		+below($md)
+			display flex
 	.form__input
 		text-align center
+		+below($md)
+			width 28rem
+			margin 0 auto
+		+below(361px)
+			width 100%
 	.form__button
 		width 28rem
 	&__button
@@ -141,6 +158,7 @@
 			transition .3s
 			box-shadow 0 5px 15px transparent
 			+below($md)
+				display none
 				transform translateY(-6rem)
 			&:after
 				display none

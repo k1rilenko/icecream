@@ -11,15 +11,28 @@
 			margin 0 auto
 		&_attachment
 			.questions__item_count
+				padding-left 5rem
+				+below($lg)
+					padding-left 0
 				&:before
 					content 'Приложение №' counter(questions)
 					+above($lg)
 						display block
 						margin-bottom 4rem 
 						position relative
+				&:after
+					position absolute
+					content ''
+					width 13px
+					height 15px
+					top 42px
+					left 0
+					background-image url(../images/icon-list.svg)
+					+below($lg)
+						content none
 			+above($lg)
 				.questions__title
-					padding 0 
+					padding 0
 	&__item
 		padding 1.8rem 0 2.4rem
 		position relative
