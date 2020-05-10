@@ -176,7 +176,7 @@ app.slider = {
 		slidesPerView: 'auto',
 		loop: true,
 		speed: 1000,
-		allowTouchMove: false,
+		allowTouchMove: true,
 		coverflowEffect: {
 			rotate: 0,
 			stretch: 60,
@@ -187,6 +187,11 @@ app.slider = {
 		navigation: {
 			nextEl: '.rating__slider .swiper-button-next',
 			prevEl: '.rating__slider .swiper-button-prev'
+		},
+		breakpoints: {
+			768: {
+				allowTouchMove: false,
+			},
 		},
 		on: {
 			init() {
